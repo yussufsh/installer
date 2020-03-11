@@ -40,3 +40,8 @@ variable "root_volume_type" {
   type        = string
   description = "The type of volume for the root block device."
 }
+
+variable "availability_zone" {
+  type        = string
+  description = "The name of Availability Zone for deploy operation"
+}

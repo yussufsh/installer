@@ -34,7 +34,7 @@ resource "openstack_compute_instance_v2" "bootstrap" {
   image_id  = var.base_image_id
 
   user_data = var.bootstrap_shim_ignition
-
+  availability_zone = var.availability_zone
   network {
     port = openstack_networking_port_v2.bootstrap_port.id
   }

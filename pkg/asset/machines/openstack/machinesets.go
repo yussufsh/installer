@@ -31,7 +31,7 @@ func MachineSets(clusterID string, config *types.InstallConfig, pool *types.Mach
 
 	// TODO(flaper87): Add support for availability zones
 	var machinesets []*clusterapi.MachineSet
-	az := ""
+	az := "PowerKVM"
 	trunk := config.Platform.OpenStack.TrunkSupport
 	provider, err := provider(clusterID, platform, mpool, osImage, az, role, userDataSecret, trunk)
 	if err != nil {

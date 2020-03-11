@@ -40,6 +40,7 @@ resource "openstack_compute_instance_v2" "master_conf" {
   name = "${var.cluster_id}-master-${count.index}"
   count = var.instance_count
 
+  availability_zone = var.availability_zone
   flavor_id = data.openstack_compute_flavor_v2.masters_flavor.id
   image_id = var.root_volume_size == null ? var.base_image_id : null
   security_groups = var.master_sg_ids

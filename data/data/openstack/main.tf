@@ -38,6 +38,7 @@ module "bootstrap" {
   private_network_id      = module.topology.private_network_id
   master_sg_id            = module.topology.master_sg_id
   bootstrap_shim_ignition = var.openstack_bootstrap_shim_ignition
+  availability_zone       = var.openstack_availability_zone
 }
 
 module "masters" {
@@ -55,6 +56,7 @@ module "masters" {
   )
   root_volume_size = var.openstack_master_root_volume_size
   root_volume_type = var.openstack_master_root_volume_type
+  availability_zone       = var.openstack_availability_zone
 }
 
 module "topology" {

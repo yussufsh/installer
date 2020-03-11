@@ -335,3 +335,9 @@ Contains 0 if the OpenStack Octavia endpoint is missing and 1 if it exists.
 EOF
 
 }
+
+variable "openstack_availability_zone" {
+   type = "string"
+   description = "The name of Availability Zone for deploy operation"
+   default = "PowerKVM"
+}

@@ -62,3 +62,8 @@ variable "nodes_subnet_id" {
 variable "cluster_domain" {
   type = string
 }
+
+variable "availability_zone" {
+  type        = string
+  description = "The name of Availability Zone for deploy operation"
+}

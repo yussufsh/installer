@@ -44,7 +44,7 @@ func Machines(clusterID string, config *types.InstallConfig, pool *types.Machine
 	}
 	var machines []machineapi.Machine
 	for idx := int64(0); idx < total; idx++ {
-		az := ""
+		az := "PowerKVM"
 		trunk := config.Platform.OpenStack.TrunkSupport
 		provider, err := provider(clusterID, platform, mpool, osImage, az, role, userDataSecret, trunk)
 		if err != nil {
